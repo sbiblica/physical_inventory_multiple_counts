@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record id="view_inventory_count_3_graph" model="ir.ui.view">
+         <field name="name">Count 3 differences graph</field>
+         <field name="model">stock.inventory.count_3</field>
+         <field name="arch" type="xml">
+             <graph string="Inventory count 3 differences" type="pivot" stacked="True">
+                 <field name="inventory_id" type="row"/>
+                 <field name="sector" type="row"/>
+                 <field name="product_id" type="row"/>
+                 <field name="product_qty_1" type="measure"/>
+                 <field name="product_qty_2" type="measure"/>
+                 <field name="difference" type="measure"/>
+             </graph>
+         </field>
+    </record>
+
+    <record id="view_inventory_count_3_graph_search" model="ir.ui.view">
+        <field name="name">Count 3 differences graph</field>
+        <field name="model">stock.inventory.count_3</field>
+        <field name="arch" type="xml">
+            <search string="Physical inventory count 3">
+                <field name="inventory_id"/>
+                <field name="sector"/>
+                <filter name="Differences" string="Differences" domain="[('difference','!=',0),('inventory_state','!=','done')]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_view_inventory_count_3_graph_all" model="ir.actions.act_window">
+        <field name="name">Count 3 differences graph</field>
+        <field name="res_model">stock.inventory.count_3</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">graph</field>
+        <field name="search_view_id" ref="view_inventory_count_3_graph_search"/>
+        <field name="view_id" ref="view_inventory_count_3_graph"/>
+        <field name="context">{'search_default_Differences':1, 'group_by_no_leaf':1,'group_by':[]}</field>
+        <field name="help">This report performs analysis physical inventory count 3.</field>
+    </record>
+
+    <menuitem id="menu_inventory_counts_reports" parent="stock.next_id_61" sequence="1" name="Inventory counts"/>
+    <menuitem action="action_view_inventory_count_3_graph_all" id="menu_view_inventory_count_3_graph_all" parent="menu_inventory_counts_reports" sequence="10"/>
+
+</data>
+</openerp>

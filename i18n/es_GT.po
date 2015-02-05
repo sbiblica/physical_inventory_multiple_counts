@@ -1,0 +1,764 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* physical_inventory_multiple_counts
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0rc1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-24 18:17+0000\n"
+"PO-Revision-Date: 2014-12-24 18:17+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.act_window,help:physical_inventory_multiple_counts.action_inventory_counts_1_2_form
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                    Click to start an inventory count 1 or 2.\n"
+"                </p>\n"
+"                <p>\n"
+"                    Periodical Inventory Counts 1 and 2 are a special inventory counting that provides\n"
+"                    double verification of user input.   These counts are used before the final inventory\n"
+"                    count.\n"
+"                </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                    Haga clic para crear un conteo 1 o 2.\n"
+"                </p>\n"
+"                <p>\n"
+"                    Los conteos periódicos de inventario 1 y 2 son conteos especiales de inventario\n"
+"                    que proveen doble verificación del ingreso de datos de los usuarios.   Estos conteos son utilizados\n"
+"                    antes del conteo de inventario final.\n"
+"                </p>\n"
+"            "
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.act_window,help:physical_inventory_multiple_counts.action_inventory_count_3_form
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                    Click to start an inventory count 3.\n"
+"                </p>\n"
+"                <p>\n"
+"                    Periodical Inventories counts 3 are a special inventory counting that provides\n"
+"                    double verification of user input.   These counts are taken from joining inventory\n"
+"                    counts 1 and 2.\n"
+"                </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                    Haga clic para crear un conteo 3.\n"
+"                </p>\n"
+"                <p>\n"
+"                    Los conteos de inventario 3 son conteos especiales de inventario que proveen\n"
+"                    doble verificación del ingreso de datos de los usuarios.   Estos conteos se toman a partir\n"
+"                    de la consolidación de los conteos 1 y 2.\n"
+"                </p>\n"
+"            "
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.act_window,help:physical_inventory_multiple_counts.action_inventory_count_4_form
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                    Click to start an inventory count 4.\n"
+"                </p>\n"
+"                <p>\n"
+"                    Periodical Inventory counts 4 are a special inventory counting that provides\n"
+"                    double verification of user input.   These counts are the final calculation\n"
+"                    taken from inventory count 3, before submitting the values to the standard\n"
+"                    physical inventory list.\n"
+"                </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                    Haga clic para crear un conteo 4.\n"
+"                </p>\n"
+"                <p>\n"
+"                    Los conteos de inventario 4 son conteos especiales de inventario que proveen\n"
+"                    doble verificación del ingreso de datos de los usuarios.   Estos conteos son el cálculo final\n"
+"                    tomado del conteo 3, antes de cargar los valores a la lista estándar de inventario físico\n"
+"                </p>\n"
+"            "
+
+#. module: physical_inventory_multiple_counts
+#: code:addons/physical_inventory_multiple_counts/physical_inventory_multicount.py:39
+#, python-format
+msgid "A Pack"
+msgstr "Un paquete"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_filter_count_3
+#: view:stock.inventory.count_4:physical_inventory_multiple_counts.view_inventory_filter_count_4
+#: view:stock.inventory.counts_1_2:physical_inventory_multiple_counts.view_inventory_filter_counts_1_2
+msgid "All"
+msgstr "Todos"
+
+#. module: physical_inventory_multiple_counts
+#: code:addons/physical_inventory_multiple_counts/physical_inventory_multicount.py:24
+#, python-format
+msgid "All products"
+msgstr "Todos los productos"
+
+#. module: physical_inventory_multiple_counts
+#: code:addons/physical_inventory_multiple_counts/physical_inventory_multicount.py:24
+#, python-format
+msgid "All products of one category"
+msgstr "Todos los productos de una categoría"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.act_window,name:physical_inventory_multiple_counts.action_wizard_count_3_final_qty
+msgid "Apply count 3 final quantity"
+msgstr "Aplicar cantidad final de conteo 3"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory:physical_inventory_multiple_counts.view_inventory_form_multicount
+msgid "Apply selected count to final quantity of count 3"
+msgstr "Aplicar conteo seleccionado a cantidad final de conteo 3"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory:physical_inventory_multiple_counts.view_inventory_form_multicount
+msgid "Are you sure?"
+msgstr "¿Está seguro?"
+
+#. module: physical_inventory_multiple_counts
+#: view:count_3.details.report:physical_inventory_multiple_counts.view_wizard_count_3_details
+#: view:count_3.validation.report:physical_inventory_multiple_counts.count_3_validation_wizard_view
+#: view:stock.inventory.wizard_count_3_final_qty:physical_inventory_multiple_counts.wizard_count_3_final_qty_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.report_inventory_counts_1_2
+msgid "Cantidad"
+msgstr "Cantidad"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.count_3_validation_template
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_3
+msgid "Cantidad 1"
+msgstr "Cantidad 1"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.count_3_validation_template
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_3
+msgid "Cantidad 2"
+msgstr "Cantidad 2"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.count_3_validation_template
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_3
+msgid "Cantidad final"
+msgstr "Cantidad final"
+
+#. module: physical_inventory_multiple_counts
+#: view:count_3.details.report:physical_inventory_multiple_counts.view_wizard_count_3_details
+#: view:count_3.validation.report:physical_inventory_multiple_counts.count_3_validation_wizard_view
+msgid "Choose inventory"
+msgstr "Seleccione inventario"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_3,company_id:0
+#: field:stock.inventory.count_4,company_id:0
+#: field:stock.inventory.counts_1_2,company_id:0
+msgid "Company"
+msgstr "Compañía"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.wizard_count_3_final_qty:physical_inventory_multiple_counts.wizard_count_3_final_qty_form
+msgid "Consolidate"
+msgstr "Consolidar"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.model,name:physical_inventory_multiple_counts.model_stock_inventory_wizard_apply_count_3_final_quantity
+#: model:ir.model,name:physical_inventory_multiple_counts.model_stock_inventory_wizard_consolidate_count_3
+#: model:ir.model,name:physical_inventory_multiple_counts.model_stock_inventory_wizard_count_3_final_qty
+#: view:stock.inventory.wizard_count_3_final_qty:physical_inventory_multiple_counts.wizard_count_3_final_qty_form
+msgid "Consolidate count 3"
+msgstr "Consolidar conteo 3"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory:physical_inventory_multiple_counts.view_inventory_form_multicount
+msgid "Consolidate counts 1 and 2"
+msgstr "Consolidar conteos 1 y 2"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.report_inventory_counts_1_2
+msgid "Conteo No."
+msgstr "Conteo No."
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_4,product_cost:0
+msgid "Cost"
+msgstr "Costo"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_4
+msgid "Costo"
+msgstr "Costo"
+
+#. module: physical_inventory_multiple_counts
+#: selection:stock.inventory,selected_count:0
+#: selection:stock.inventory.wizard_count_3_final_qty,count_number:0
+msgid "Count 1"
+msgstr "Conteo 1"
+
+#. module: physical_inventory_multiple_counts
+#: selection:stock.inventory,selected_count:0
+#: selection:stock.inventory.wizard_count_3_final_qty,count_number:0
+msgid "Count 2"
+msgstr "Conteo 2"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory:physical_inventory_multiple_counts.view_inventory_form_multicount
+msgid "Count 3"
+msgstr "Conteo 3"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.act_window,name:physical_inventory_multiple_counts.action_wizard_count_3_details
+#: model:ir.ui.menu,name:physical_inventory_multiple_counts.menu_action_wizard_count_3_details
+msgid "Count 3 details"
+msgstr "Detalle de conteo 3"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.act_window,name:physical_inventory_multiple_counts.action_view_inventory_count_3_graph_all
+#: model:ir.ui.menu,name:physical_inventory_multiple_counts.menu_view_inventory_count_3_graph_all
+msgid "Count 3 differences graph"
+msgstr "Gráfica de diferencias den conteo 3"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.act_window,name:physical_inventory_multiple_counts.count_3_validation_wizard_action
+#: model:ir.actions.report.xml,name:physical_inventory_multiple_counts.action_report_count_3_validation
+#: model:ir.ui.menu,name:physical_inventory_multiple_counts.count_3_validation_wizard_menu
+msgid "Count 3 validation report"
+msgstr "Reporte de validación de conteo 3"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory:physical_inventory_multiple_counts.view_inventory_form_multicount
+msgid "Count 4"
+msgstr "Conteo 4"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.act_window,name:physical_inventory_multiple_counts.action_view_inventory_count_4_graph_all
+#: model:ir.ui.menu,name:physical_inventory_multiple_counts.menu_view_inventory_count_4_graph_all
+msgid "Count 4 graph"
+msgstr "Gráfico de conteo 4"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.counts_1_2:physical_inventory_multiple_counts.view_inventory_filter_counts_1_2
+#: field:stock.inventory.counts_1_2,count_number:0
+msgid "Count number"
+msgstr "Número de conteo"
+
+#. module: physical_inventory_multiple_counts
+#: field:count_3.details.report,create_uid:0
+#: field:count_3.validation.report,create_uid:0
+#: field:stock.inventory.count_3,create_uid:0
+#: field:stock.inventory.count_4,create_uid:0
+#: field:stock.inventory.counts_1_2,create_uid:0
+#: field:stock.inventory.wizard_count_3_final_qty,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: physical_inventory_multiple_counts
+#: field:count_3.details.report,create_date:0
+#: field:count_3.validation.report,create_date:0
+#: field:stock.inventory.count_3,create_date:0
+#: field:stock.inventory.count_4,create_date:0
+#: field:stock.inventory.counts_1_2,create_date:0
+#: field:stock.inventory.wizard_count_3_final_qty,create_date:0
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.count_3_validation_template
+msgid "Código"
+msgstr "Código"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_3,default_code:0
+#: field:stock.inventory.counts_1_2,default_code:0
+msgid "Default code"
+msgstr "Ref"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.count_3_validation_template
+msgid "Descripción"
+msgstr "Descripción"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.count_3_validation_template
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_3
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_4
+msgid "Diferencia"
+msgstr "Diferencia"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_4
+msgid "Diferencia costo"
+msgstr "Diferencia costo"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_3,difference:0
+#: field:stock.inventory.count_4,difference_qty:0
+msgid "Difference"
+msgstr "Diferencia"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_count_3_graph_search
+msgid "Differences"
+msgstr "Diferencias"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.count_3_validation_template
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_3
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_4
+#: view:website:physical_inventory_multiple_counts.report_inventory_counts_1_2
+msgid "Fecha"
+msgstr "Fecha"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_4,final_product_value:0
+msgid "Final product difference"
+msgstr "Diferencia final"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_3,final_product_qty:0
+#: field:stock.inventory.count_4,final_product_qty:0
+msgid "Final quantity"
+msgstr "Cantidad final"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_4
+msgid "Físico"
+msgstr "Físico"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory:physical_inventory_multiple_counts.view_inventory_form_multicount
+msgid "Generate count 4"
+msgstr "Generar conteo 4"
+
+#. module: physical_inventory_multiple_counts
+#: view:count_3.details.report:physical_inventory_multiple_counts.view_wizard_count_3_details
+msgid "Generate report"
+msgstr "Generar reporte"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_filter_count_3
+#: view:stock.inventory.count_4:physical_inventory_multiple_counts.view_inventory_filter_count_4
+#: view:stock.inventory.counts_1_2:physical_inventory_multiple_counts.view_inventory_filter_counts_1_2
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: physical_inventory_multiple_counts
+#: field:count_3.details.report,id:0
+#: field:count_3.validation.report,id:0
+#: field:report.physical_inventory_multiple_counts.count_3_validation_template,id:0
+#: field:stock.inventory.count_3,id:0
+#: field:stock.inventory.count_4,id:0
+#: field:stock.inventory.counts_1_2,id:0
+#: field:stock.inventory.wizard_count_3_final_qty,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.count_3_validation_template
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_3
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_4
+#: view:website:physical_inventory_multiple_counts.report_inventory_counts_1_2
+msgid "Inventario"
+msgstr "Inventario"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.model,name:physical_inventory_multiple_counts.model_stock_inventory
+#: field:stock.inventory.count_3,inventory_id:0
+#: field:stock.inventory.count_4,inventory_id:0
+#: field:stock.inventory.counts_1_2,inventory_id:0
+msgid "Inventory"
+msgstr "Inventario"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.model,name:physical_inventory_multiple_counts.model_stock_inventory_count_3
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_count_3_tree
+msgid "Inventory Count 3"
+msgstr "Conteo de inventario 3"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.model,name:physical_inventory_multiple_counts.model_stock_inventory_count_4
+#: view:stock.inventory.count_4:physical_inventory_multiple_counts.view_inventory_count_4_tree
+msgid "Inventory Count 4"
+msgstr "Conteo de inventario 4"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.model,name:physical_inventory_multiple_counts.model_stock_inventory_counts_1_2
+#: view:stock.inventory.counts_1_2:physical_inventory_multiple_counts.view_inventory_counts_1_2_tree
+msgid "Inventory Counts 1 and 2"
+msgstr "Conteos de inventario 1 y 2"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory:physical_inventory_multiple_counts.view_inventory_form_multicount
+msgid "Inventory Details"
+msgstr "Detalle de inventario"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.report.xml,name:physical_inventory_multiple_counts.action_report_inventory_count_3
+#: field:stock.inventory,inventory_count_3_id:0
+msgid "Inventory count 3"
+msgstr "Conteo de inventario 3"
+
+#. module: physical_inventory_multiple_counts
+#: code:addons/physical_inventory_multiple_counts/wizard/count_3_details_wizard.py:23
+#, python-format
+msgid "Inventory count 3 details"
+msgstr "Detalle de conteo de inventario 3"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_count_3_graph
+msgid "Inventory count 3 differences"
+msgstr "Diferencias de conteo de inventario 3"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.report.xml,name:physical_inventory_multiple_counts.action_report_inventory_count_4
+#: field:stock.inventory,inventory_count_4_id:0
+#: view:stock.inventory.count_4:physical_inventory_multiple_counts.view_inventory_count_4_graph
+#: view:stock.inventory.count_4:physical_inventory_multiple_counts.view_inventory_count_4_graph_search
+msgid "Inventory count 4"
+msgstr "Conteo de inventario 4"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.ui.menu,name:physical_inventory_multiple_counts.menu_inventory_counts_reports
+msgid "Inventory counts"
+msgstr "Conteos de inventario"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.report.xml,name:physical_inventory_multiple_counts.action_report_inventory_counts_1_2
+#: field:stock.inventory,inventory_counts_1_2_id:0
+msgid "Inventory counts 1 and 2"
+msgstr "Conteos de inventario 1 y 2"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_3,inventory_name:0
+msgid "Inventory name"
+msgstr "Nombre del inventario"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_filter_count_3
+#: view:stock.inventory.count_4:physical_inventory_multiple_counts.view_inventory_filter_count_4
+#: view:stock.inventory.counts_1_2:physical_inventory_multiple_counts.view_inventory_filter_counts_1_2
+msgid "Inventory reference"
+msgstr "Referencia del inventario"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_3,inventory_state:0
+#: field:stock.inventory.count_4,inventory_state:0
+msgid "Inventory state"
+msgstr "Estado del inventario"
+
+#. module: physical_inventory_multiple_counts
+#: field:count_3.details.report,write_uid:0
+#: field:count_3.validation.report,write_uid:0
+#: field:stock.inventory.count_3,write_uid:0
+#: field:stock.inventory.count_4,write_uid:0
+#: field:stock.inventory.counts_1_2,write_uid:0
+#: field:stock.inventory.wizard_count_3_final_qty,write_uid:0
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: physical_inventory_multiple_counts
+#: field:count_3.details.report,write_date:0
+#: field:count_3.validation.report,write_date:0
+#: field:stock.inventory.count_3,write_date:0
+#: field:stock.inventory.count_4,write_date:0
+#: field:stock.inventory.counts_1_2,write_date:0
+#: field:stock.inventory.wizard_count_3_final_qty,write_date:0
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory:physical_inventory_multiple_counts.view_inventory_form_multicount
+msgid "Load count to physical"
+msgstr "Cargar conteo a físico"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_filter_count_3
+#: field:stock.inventory.count_3,location_id:0
+#: view:stock.inventory.count_4:physical_inventory_multiple_counts.view_inventory_filter_count_4
+#: field:stock.inventory.count_4,location_id:0
+#: view:stock.inventory.counts_1_2:physical_inventory_multiple_counts.view_inventory_filter_counts_1_2
+#: field:stock.inventory.counts_1_2,location_id:0
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: physical_inventory_multiple_counts
+#: code:addons/physical_inventory_multiple_counts/physical_inventory_multicount.py:37
+#, python-format
+msgid "One Lot/Serial Number"
+msgstr "Un Lote/Número de serie"
+
+#. module: physical_inventory_multiple_counts
+#: code:addons/physical_inventory_multiple_counts/physical_inventory_multicount.py:34
+#, python-format
+msgid "One owner only"
+msgstr "Un solo propietario"
+
+#. module: physical_inventory_multiple_counts
+#: code:addons/physical_inventory_multiple_counts/physical_inventory_multicount.py:35
+#, python-format
+msgid "One product for a specific owner"
+msgstr "Un producto para un propietario específico"
+
+#. module: physical_inventory_multiple_counts
+#: code:addons/physical_inventory_multiple_counts/physical_inventory_multicount.py:25
+#, python-format
+msgid "One product only"
+msgstr "Un sólo producto"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_4:physical_inventory_multiple_counts.view_inventory_count_4_graph_search
+msgid "Pending inventories"
+msgstr "Inventarios pendientes"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.act_window,name:physical_inventory_multiple_counts.action_inventory_count_3_form
+#: model:ir.ui.menu,name:physical_inventory_multiple_counts.menu_action_inventory_count_3_form
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_3
+msgid "Physical Inventory Count 3"
+msgstr "Conteo físico de inventario 3"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.count_3_validation_template
+msgid "Physical Inventory Count 3 validation"
+msgstr "Validación de conteo físico de inventario 3"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.act_window,name:physical_inventory_multiple_counts.action_inventory_count_4_form
+#: model:ir.ui.menu,name:physical_inventory_multiple_counts.menu_action_inventory_count_4_form
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_4
+msgid "Physical Inventory Count 4"
+msgstr "Conteo físico de inventario 4"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.act_window,name:physical_inventory_multiple_counts.action_inventory_counts_1_2_form
+#: model:ir.ui.menu,name:physical_inventory_multiple_counts.menu_action_inventory_counts_1_2_form
+#: view:website:physical_inventory_multiple_counts.report_inventory_counts_1_2
+msgid "Physical Inventory Counts 1 and 2"
+msgstr "Conteos físicos de inventario 1 y 2"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_filter_count_3
+msgid "Physical Inventory counts by first responsible"
+msgstr "Conteos de inventario físico por primer respondable"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.counts_1_2:physical_inventory_multiple_counts.view_inventory_filter_counts_1_2
+msgid "Physical Inventory counts by responsible"
+msgstr "Conteos de inventario físico por respondable"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_filter_count_3
+msgid "Physical Inventory counts by second responsible"
+msgstr "Conteos de inventario físico por segundo respondable"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_count_3_graph_search
+msgid "Physical inventory count 3"
+msgstr "Conteo de inventario físico 3"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_tree_count_3_details
+msgid "Physical inventory count 3 details"
+msgstr "Detalle de conteo de inventario físico 3"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.model,name:physical_inventory_multiple_counts.model_count_3_validation_report
+msgid "Physical inventory count 3 validation report"
+msgstr "Reporte de validación de conteo físico de inventario 3"
+
+#. module: physical_inventory_multiple_counts
+#: view:count_3.validation.report:physical_inventory_multiple_counts.count_3_validation_wizard_view
+msgid "Print report"
+msgstr "Imprimir reporte"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_filter_count_3
+#: field:stock.inventory.count_3,product_id:0
+#: view:stock.inventory.count_4:physical_inventory_multiple_counts.view_inventory_filter_count_4
+#: field:stock.inventory.count_4,product_id:0
+#: view:stock.inventory.counts_1_2:physical_inventory_multiple_counts.view_inventory_filter_counts_1_2
+#: field:stock.inventory.counts_1_2,product_id:0
+msgid "Product"
+msgstr "Producto"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory,category_id:0
+msgid "Product Category"
+msgstr "Categoría de producto"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_3,product_ean13:0
+msgid "Product barcode"
+msgstr "Código de barras del producto"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_3,product_code:0
+msgid "Product code"
+msgstr "Código de producto"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_4,difference_value:0
+msgid "Product difference"
+msgstr "Diferencia en producto"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_4,product_value:0
+msgid "Product value"
+msgstr "Valor del producto"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_3
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_4
+#: view:website:physical_inventory_multiple_counts.report_inventory_counts_1_2
+msgid "Producto"
+msgstr "Producto"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_4,product_qty:0
+#: field:stock.inventory.counts_1_2,product_qty:0
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_3,product_qty_1:0
+msgid "Quantity 1"
+msgstr "Cantidad 1"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_3,product_qty_2:0
+msgid "Quantity 2"
+msgstr "Cantidad 2"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.count_3_validation_template
+msgid "Responsable 1"
+msgstr "Responsable 1"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.count_3_validation_template
+msgid "Responsable 2"
+msgstr "Responsable 2"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.counts_1_2:physical_inventory_multiple_counts.view_inventory_filter_counts_1_2
+#: field:stock.inventory.counts_1_2,responsible:0
+#: view:website:physical_inventory_multiple_counts.report_inventory_counts_1_2
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_filter_count_3
+#: field:stock.inventory.count_3,responsible_1:0
+msgid "Responsible 1"
+msgstr "Responsable 1"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_filter_count_3
+#: field:stock.inventory.count_3,responsible_2:0
+msgid "Responsible 2"
+msgstr "Responsable 2"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory:physical_inventory_multiple_counts.view_inventory_form_multicount
+msgid "Return to confirm"
+msgstr "Regresar a confirmado"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_filter_count_3
+#: view:stock.inventory.count_4:physical_inventory_multiple_counts.view_inventory_filter_count_4
+#: view:stock.inventory.counts_1_2:physical_inventory_multiple_counts.view_inventory_filter_counts_1_2
+msgid "Search Inventory Count"
+msgstr "Buscar conteo de inventario"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory.count_3:physical_inventory_multiple_counts.view_inventory_filter_count_3
+#: field:stock.inventory.count_3,sector:0
+#: view:stock.inventory.counts_1_2:physical_inventory_multiple_counts.view_inventory_filter_counts_1_2
+#: field:stock.inventory.counts_1_2,sector:0
+#: view:website:physical_inventory_multiple_counts.count_3_validation_template
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_3
+#: view:website:physical_inventory_multiple_counts.report_inventory_counts_1_2
+msgid "Sector"
+msgstr "Sector"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.wizard_count_3_final_qty,count_number:0
+msgid "Select count to apply to final quantity of count 3"
+msgstr "Seleccione conteo a aplicar a cantidad final de conteo 3"
+
+#. module: physical_inventory_multiple_counts
+#: field:count_3.details.report,inventory_id:0
+#: field:count_3.validation.report,inventory_id:0
+msgid "Select inventory"
+msgstr "Seleccione inventario"
+
+#. module: physical_inventory_multiple_counts
+#: field:count_3.details.report,sector:0
+#: field:count_3.validation.report,sector:0
+msgid "Select sector"
+msgstr "Seleccione sector"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory,selected_count:0
+msgid "Selected count"
+msgstr "Conteo seleccionado"
+
+#. module: physical_inventory_multiple_counts
+#: help:stock.inventory,category_id:0
+msgid "Specify Category to focus your inventory on a particular category of products."
+msgstr "Especifique la categoría para enfocar su inventario en una categoría particular de productos."
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory:physical_inventory_multiple_counts.view_inventory_form_multicount
+msgid "Start Inventory"
+msgstr "Empezar inventario"
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_4
+msgid "Teórico"
+msgstr "Teórico"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_4,theoretical_qty:0
+msgid "Theoretical quantity"
+msgstr "Cantidad teórica"
+
+#. module: physical_inventory_multiple_counts
+#: field:stock.inventory.count_4,theoretical_value:0
+msgid "Theoretical value"
+msgstr "Valor teórico"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.act_window,help:physical_inventory_multiple_counts.action_view_inventory_count_4_graph_all
+msgid "This report performs analysis on physical inventory count 4."
+msgstr "Este reporte ejecuta un análisis en el conteo de inventario físico 4."
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.actions.act_window,help:physical_inventory_multiple_counts.action_view_inventory_count_3_graph_all
+msgid "This report performs analysis physical inventory count 3."
+msgstr "Este reporte ejecuta un análisis en el conteo de inventario físico 3."
+
+#. module: physical_inventory_multiple_counts
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_3
+#: view:website:physical_inventory_multiple_counts.report_inventory_count_4
+#: view:website:physical_inventory_multiple_counts.report_inventory_counts_1_2
+msgid "Ubicación"
+msgstr "Ubicación"
+
+#. module: physical_inventory_multiple_counts
+#: view:stock.inventory:physical_inventory_multiple_counts.view_inventory_form_multicount
+msgid "Validate Inventory"
+msgstr "Validar inventario"
+
+#. module: physical_inventory_multiple_counts
+#: model:ir.model,name:physical_inventory_multiple_counts.model_count_3_details_report
+#: model:ir.model,name:physical_inventory_multiple_counts.model_wizard_physical_inventory_reports
+msgid "Wizard that generates reports for physical inventory counts"
+msgstr "Asistente que genera reportes para conteos de inventario físico"
+

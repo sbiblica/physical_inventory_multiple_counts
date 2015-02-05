@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_wizard_count_3_details" model="ir.ui.view">
+            <field name="name">Count 3 details</field>
+            <field name="model">count_3.details.report</field>
+            <field name="arch" type="xml">
+                <form string="Choose inventory">
+                    <group>
+                        <field name="inventory_id" required="1"/>
+                        <field name="sector" required="1"/>
+                    </group>
+                    <footer>
+                        <button name="open_table" string="Generate report" type="object" class="oe_highlight"  />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_wizard_count_3_details" model="ir.actions.act_window">
+            <field name="name">Count 3 details</field>
+            <field name="res_model">count_3.details.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_wizard_count_3_details"/>
+            <field name="target">new</field>
+        </record>
+        <menuitem id="menu_action_wizard_count_3_details" action="action_wizard_count_3_details" parent="menu_inventory_counts_reports" sequence="20"/>
+
+        <record id="view_tree_count_3_details" model="ir.ui.view">
+            <field name="name">Count 3 details</field>
+            <field name="model">stock.inventory.count_3</field>
+            <field name="arch" type="xml">
+                <tree string="Physical inventory count 3 details" create="0" delete="0">
+                    <field name="inventory_name"/>
+                    <field name="sector"/>
+                    <field name="product_code"/>
+                    <field name="product_ean13"/>
+                    <field name="responsible_1"/>
+                    <field name="product_qty_1"/>
+                    <field name="responsible_2"/>
+                    <field name="product_qty_2"/>
+                    <field name="final_product_qty"/>
+                    <field name="difference"/>
+               </tree>
+            </field>
+        </record>
+    </data>
+
+</openerp>
+

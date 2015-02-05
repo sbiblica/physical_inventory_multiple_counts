@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <report
+            string="Inventory counts 1 and 2"
+            id="action_report_inventory_counts_1_2"
+            model="stock.inventory"
+            report_type="qweb-pdf"
+            name="physical_inventory_multiple_counts.report_inventory_counts_1_2"
+            file="physical_inventory_multiple_counts.report_inventory_counts_1_2"
+        />
+
+        <report
+            string="Inventory count 3"
+            id="action_report_inventory_count_3"
+            model="stock.inventory"
+            report_type="qweb-pdf"
+            name="physical_inventory_multiple_counts.report_inventory_count_3"
+            file="physical_inventory_multiple_counts.report_inventory_count_3"
+        />
+
+        <report
+            string="Count 3 validation report"
+            id="action_report_count_3_validation"
+            model="report.physical_inventory_multiple_counts.count_3_validation_template"
+            report_type="qweb-pdf"
+            name="physical_inventory_multiple_counts.count_3_validation_template"
+            file="physical_inventory_multiple_counts.count_3_validation_template"
+        />
+
+        <report
+            string="Inventory count 4"
+            id="action_report_inventory_count_4"
+            model="stock.inventory"
+            report_type="qweb-pdf"
+            name="physical_inventory_multiple_counts.report_inventory_count_4"
+            file="physical_inventory_multiple_counts.report_inventory_count_4"
+        />
+
+    </data>
+</openerp>

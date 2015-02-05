@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record id="view_inventory_count_4_graph" model="ir.ui.view">
+         <field name="name">Count 4 graph</field>
+         <field name="model">stock.inventory.count_4</field>
+         <field name="arch" type="xml">
+             <graph string="Inventory count 4" type="pivot" stacked="True">
+                 <field name="inventory_id" type="row"/>
+                 <field name="product_id" type="row"/>
+                 <field name="product_cost" type="measure"/>
+                 <field name="theoretical_qty" type="measure"/>
+                 <field name="product_qty" type="measure"/>
+                 <field name="difference_qty" type="measure"/>
+                 <field name="final_product_qty" type="measure"/>
+                 <field name="theoretical_value" type="measure"/>
+                 <field name="product_value" type="measure"/>
+                 <field name="difference_value" type="measure"/>
+                 <field name="final_product_value" type="measure"/>
+             </graph>
+         </field>
+    </record>
+
+    <record id="view_inventory_count_4_graph_search" model="ir.ui.view">
+        <field name="name">Count 4 graph</field>
+        <field name="model">stock.inventory.count_4</field>
+        <field name="arch" type="xml">
+            <search string="Inventory count 4">
+                <field name="inventory_id"/>
+                <filter name="Pending" string="Pending inventories" domain="[('inventory_state','!=','done')]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_view_inventory_count_4_graph_all" model="ir.actions.act_window">
+        <field name="name">Count 4 graph</field>
+        <field name="res_model">stock.inventory.count_4</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">graph</field>
+        <field name="search_view_id" ref="view_inventory_count_4_graph_search"/>
+        <field name="view_id" ref="view_inventory_count_4_graph"/>
+        <field name="context">{'search_default_Pending':1, 'group_by_no_leaf':1,'group_by':[]}</field>
+        <field name="help">This report performs analysis on physical inventory count 4.</field>
+    </record>
+
+    <menuitem id="menu_inventory_counts_reports" parent="stock.next_id_61" sequence="1" name="Inventory counts"/>
+    <menuitem action="action_view_inventory_count_4_graph_all" id="menu_view_inventory_count_4_graph_all" parent="menu_inventory_counts_reports" sequence="50"/>
+
+</data>
+</openerp>
