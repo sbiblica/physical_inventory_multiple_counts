@@ -225,13 +225,18 @@ class stock_inventory(osv.osv):
             count4_pool.unlink(cr, uid, count4_ids, context=context)
             #count3_ids = count3_pool.search(cr, uid, [('inventory_id', 'in', ids)])
             #for count in count3_pool.browse(cr, uid, count3_ids, context=context):
-            domain = ' inventory_id in %s'
+            domain = ' l.inventory_id in %s'
             args = (tuple(ids),)
             cr.execute('''
-               SELECT company_id, inventory_id, location_id, product_id, SUM(final_product_qty) as final_product_qty
-               FROM stock_inventory_count_3
+               SELECT l.company_id, l.inventory_id, l.location_id, l.product_id, SUM(Coalesce(c.final_product_qty, 0)) as final_product_qty
+               FROM stock_inventory_line l
+               LEFT JOIN stock_inventory_count_3 c
+               On c.company_id = l.company_id
+               And c.inventory_id = l.inventory_id
+               And c.location_id = l.location_id
+               And c.product_id = l.product_id
                WHERE''' + domain + '''
-               GROUP BY company_id, inventory_id, location_id, product_id
+               GROUP BY l.company_id, l.inventory_id, l.location_id, l.product_id
             ''', args)
             cr_count = cr.dictfetchall()
             for count in cr_count:
@@ -316,7 +321,7 @@ class stock_inventory(osv.osv):
         inventory_line_pool = self.pool.get('stock.inventory.line')
         count4_pool = self.pool.get('stock.inventory.count_4')
         if ids:
-            count4_ids = count4_pool.search(cr, uid, [('inventory_id', 'in', ids)])
+            count4_ids = count4_pool.search(cr, uid, [('inventory_id', 'in', ids)
             for count in count4_pool.browse(cr, uid, count4_ids, context=context):
                 inventory_line_ids = inventory_line_pool.search(cr, uid, [('company_id', '=', count.company_id.id),
                                                                ('inventory_id', '=',
