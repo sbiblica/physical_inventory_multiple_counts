@@ -321,7 +321,7 @@ class stock_inventory(osv.osv):
         inventory_line_pool = self.pool.get('stock.inventory.line')
         count4_pool = self.pool.get('stock.inventory.count_4')
         if ids:
-            count4_ids = count4_pool.search(cr, uid, [('inventory_id', 'in', ids)
+            count4_ids = count4_pool.search(cr, uid, [('inventory_id', 'in', ids)])
             for count in count4_pool.browse(cr, uid, count4_ids, context=context):
                 inventory_line_ids = inventory_line_pool.search(cr, uid, [('company_id', '=', count.company_id.id),
                                                                ('inventory_id', '=',
@@ -375,6 +375,7 @@ class stock_inventory_count_3(osv.osv):
     _order = "inventory_id desc"
 
     def _get_inventory_status(self, cr, uid, ids, field_name, arg, context):
+        res = []
         for i in ids:
             #get the status of the inventory
             sql_req= """
@@ -420,6 +421,7 @@ class stock_inventory_count_4(osv.osv):
     _order = "inventory_id desc"
 
     def _get_inventory_status(self, cr, uid, ids, field_name, arg, context):
+        res = []
         for i in ids:
             #get the status of the inventory
             sql_req= """
