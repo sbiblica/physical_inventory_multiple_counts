@@ -13,6 +13,7 @@ class count_3_details_report(osv.osv_memory):
     }
 
     def open_table(self, cr, uid, ids, context=None):
+        var = 1
         if context is None:
             context = {}
         data = self.read(cr, uid, ids, context=context)[0]
