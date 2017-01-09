@@ -46,7 +46,7 @@ Physical Inventory with Multiple Counts
         'wizard/count_3_validation_wizard.xml',
     ],
     'sequence': 150,
-    'installable': True,
+    'installable': False,
     'application': True,
     'auto_install': False,
 }
