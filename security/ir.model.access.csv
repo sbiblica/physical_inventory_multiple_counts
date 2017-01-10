@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_stock_inventory_counts_1_2,stock.inventory.counts_1_2 all,model_stock_inventory_counts_1_2,,1,1,1,1
-access_stock_inventory_count_3,access_stock_inventory_count_3,model_stock_inventory_count_3,,1,1,1,1
-access_stock_inventory_count_4,access_stock_inventory_count_4,model_stock_inventory_count_4,,1,1,1,1
