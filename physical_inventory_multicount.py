@@ -302,6 +302,7 @@ class stock_inventory(osv.osv):
                     'final_product_qty': final_product_qty,
                     'final_product_value': final_product_value
                 }
+                print data
                 count4_pool.create(cr, uid, data, context=context)
             for inv in self.browse(cr, uid, ids, context=context):
                 self.write(cr, uid, [inv.id], {'state': 'count_4_generate'})
