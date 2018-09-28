@@ -330,7 +330,15 @@ class stock_inventory(osv.osv):
                     'final_product_qty': final_product_qty,
                     'final_product_value': final_product_value
                 }
-                count4_pool.create(cr, uid, data, context=context)
+                count4_ids = count4_pool.search(cr, uid, [('company_id', '=', company_id),
+                                                         ('inventory_id', '=', inventory_id),
+                                                         ('location_id', '=', location_id),
+                                                         ('product_id', '=', product_id)])
+                if count4_ids:
+                    for count4_line in count4_pool.browse(cr, uid, count4_ids, context=context):
+                        inventory_line_pool.write(cr, uid, count4_line.id, {'final_product_qty': count4_line.final_product_qty + final_product_qty}, context=context)
+                else:
+                    count4_pool.create(cr, uid, data, context=context)
             for inv in self.browse(cr, uid, ids, context=context):
                 self.write(cr, uid, [inv.id], {'state': 'count_4_generate'})
 
