@@ -338,7 +338,12 @@ class stock_inventory(osv.osv):
                     for count4_line in count4_pool.browse(cr, uid, count4_ids, context=context):
                         product_qty_sum = count4_line.final_product_qty + final_product_qty
                         product_value_sum = product_qty_sum * product_cost
-                        count4_pool.write(cr, uid, count4_line.id, {'final_product_qty': product_qty_sum, 'final_product_value': product_value_sum}, context=context)
+                        count4_pool.write(cr, uid, count4_line.id, {
+                            'final_product_qty': product_qty_sum,
+                            'final_product_value': product_value_sum,
+                            'product_qty': product_qty_sum,
+                            'product_value': product_value_sum,
+                        }, context=context)
                 else:
                     count4_pool.create(cr, uid, data, context=context)
             for inv in self.browse(cr, uid, ids, context=context):
