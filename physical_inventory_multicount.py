@@ -225,18 +225,44 @@ class stock_inventory(osv.osv):
             count4_pool.unlink(cr, uid, count4_ids, context=context)
             #count3_ids = count3_pool.search(cr, uid, [('inventory_id', 'in', ids)])
             #for count in count3_pool.browse(cr, uid, count3_ids, context=context):
+            # domain = ' l.inventory_id in %s'
+            # args = (tuple(ids),)
+            # cr.execute('''
+            #    SELECT l.company_id, l.inventory_id, l.location_id, l.product_id, SUM(Coalesce(c.final_product_qty, 0)) as final_product_qty
+            #    FROM stock_inventory_line l
+            #    LEFT JOIN stock_inventory_count_3 c
+            #    On c.company_id = l.company_id
+            #    And c.inventory_id = l.inventory_id
+            #    And c.location_id = l.location_id
+            #    And c.product_id = l.product_id
+            #    WHERE''' + domain + '''
+            #    GROUP BY l.company_id, l.inventory_id, l.location_id, l.product_id
+            # ''', args)
             domain = ' l.inventory_id in %s'
             args = (tuple(ids),)
             cr.execute('''
-               SELECT l.company_id, l.inventory_id, l.location_id, l.product_id, SUM(Coalesce(c.final_product_qty, 0)) as final_product_qty
+               SELECT l.company_id, l.inventory_id, l.location_id, l.product_id, Coalesce(c.final_product_qty, 0) as final_product_qty, SUM(Coalesce(s.qty, 0)) AS product_qty, COALESCE(pph.cost, 0) AS cost
                FROM stock_inventory_line l
+               JOIN product_product p
+               ON p.id = l.product_id
                LEFT JOIN stock_inventory_count_3 c
                On c.company_id = l.company_id
                And c.inventory_id = l.inventory_id
                And c.location_id = l.location_id
                And c.product_id = l.product_id
-               WHERE''' + domain + '''
-               GROUP BY l.company_id, l.inventory_id, l.location_id, l.product_id
+               LEFT JOIN stock_quant s
+               On s.company_id = l.company_id
+               And s.location_id = l.location_id
+               And s.product_id = l.product_id
+               LEFT JOIN product_price_history pph on (pph.id = (
+                   SELECT pph1.id FROM product_price_history pph1
+                       WHERE pph1.product_template_id = p.product_tmpl_id
+                       ORDER BY pph1.datetime DESC
+                       LIMIT 1)
+               )
+               WHERE l.inventory_id in %s
+               GROUP BY l.company_id, l.inventory_id, l.location_id, l.product_id, Coalesce(c.final_product_qty, 0), COALESCE(pph.cost, 0)
+               ORDER BY l.company_id, l.inventory_id, l.location_id, l.product_id
             ''', args)
             cr_count = cr.dictfetchall()
             for count in cr_count:
@@ -245,30 +271,32 @@ class stock_inventory(osv.osv):
                 location_id = count['location_id']
                 product_id = count['product_id']
                 product_qty = count['final_product_qty']
-                theoretical_qty = 0
+                theoretical_qty = count['product_qty']
+                # theoretical_qty = 0
                 theoretical_value = 0
                 product_cost = 0
 
-                domain = ' company_id = %s'
-                args = (company_id,)
-                domain += ' and location_id = %s'
-                args += (location_id,)
-                domain += ' and product_id = %s'
-                args += (product_id,)
-                cr.execute('''
-                   SELECT Coalesce(sum(qty), 0) as product_qty
-                   FROM stock_quant s
-                   WHERE''' + domain
-                , args)
-                for theoretical in cr.dictfetchall():
-                    theoretical_qty = theoretical['product_qty']
-                if not theoretical_qty:
-                    theoretical_qty = 0
+                # domain = ' company_id = %s'
+                # args = (company_id,)
+                # domain += ' and location_id = %s'
+                # args += (location_id,)
+                # domain += ' and product_id = %s'
+                # args += (product_id,)
+                # cr.execute('''
+                #    SELECT Coalesce(sum(qty), 0) as product_qty
+                #    FROM stock_quant s
+                #    WHERE''' + domain
+                # , args)
+                # for theoretical in cr.dictfetchall():
+                #     theoretical_qty = theoretical['product_qty']
+                # if not theoretical_qty:
+                #     theoretical_qty = 0
 
                 #product_cost = count.product_id.product_tmpl_id.standard_price
                 #product_ids = product_pool.search(cr, uid, [('id', '=', product_id)])
-                product = product_pool.browse(cr, uid, product_id, context=context)
-                product_cost = product.product_tmpl_id.standard_price
+                # product = product_pool.browse(cr, uid, product_id, context=context)
+                # product_cost = product.product_tmpl_id.standard_price
+                product_cost = count['cost']
                 product_value = product_qty * product_cost
                 difference_qty = 0
                 difference_value = 0
